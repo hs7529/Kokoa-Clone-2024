@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-border: 1px solid rgba(0, 0, 0, 0.2);
+  --gray-color-main: rgba(0, 0, 0, 0.6);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* 레이아웃 */
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.wrap {
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  min-width: 500px;
+  height: 90vh;
+  background-color: #fff;
+  border-style: none;
+  border-radius: 20px;
+  margin: 0 20px;
+  position: relative;
+  padding: 30px 30px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.header i {
+  color: var(--gray-color-main);
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.main {
+  height: 80    vh;
+}
+.control-box {
+  box-sizing: border-box;
+  width: 440px;
+  height: 80px;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  line-height: 30px;
+}
+
+/* 세부사항 */
+
+.album-1st {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 10px;
+  padding-left: 35px;
+  align-items: center;
+}
+.album__signer-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.album__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--gray-color-main);
+}
+
+.album__text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-color-main);
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.album__btn {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.album__btn button {
+  width: 45%;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  font-size: 1.1em;
+}
+
+.album__btn button:first-child {
+  background-color: black;
+  color: white;
+}
+
+.album__btn button:last-child span {
+  color: var(--gray-color-main);
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.song-list {
+  height: 100%;
+}
+
+.song-list ul {
+  height: 50%;
+  overflow-y: scroll;
+}
+
+.song-list ul::-webkit-scrollbar {
+  display: none;
+}
+
+.song-list ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.song-list ul > li img {
+  width: 70px;
+  border-radius: 10px;
+}
+
+.song-list ul > li i {
+  color: var(--gray-color-main);
+  opacity: 0.5;
+}
+
+.song-list_text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.song-list_text span {
+  width: 100%;
+  padding: 5px 0 5px 15px;
+}
+
+.song-list_text span:first-child {
+  font-size: 20px;
+  color: var(--gray-color-main);
+}
+
+.song-list_text span:last-child {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gray-color-main);
+}
+
+.control-box__info {
+  width: 60%;
+}
+
+.control-box__info h2 {
+  font-size: 20px;
+  color: rgb(199, 199, 199);
+}
+
+.control-box__info span {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.control-box__controls {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+  width: 40%;
+}
+
+.album-2nd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.album-2nd__img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
+  margin: 20px 0 50px 0;
+}
+
+.album-2nd__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--gray-color-main);
+  margin-bottom: 20px;
+}
+
+.album-2nd__text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-color-main);
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.player {
+  position: relative;
+}
+.player__timer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.player__timer span {
+  color: rgba(0, 0, 0, 0.2);
+
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.player__progress-bar {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.player__progress-bar div {
+  height: 5px;
+  background-color: lightgray;
+}
+
+.player__progress-bar div:nth-child(1) {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.player__progress-bar div:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.player__progress-bar div:nth-child(3) {
+  width: 35%;
+}
+
+.control-box-2nd {
+  box-sizing: border-box;
+  width: 440px;
+  height: 120px;
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.control-box-2nd__controls-2nd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 35px;
+}
+.control-box-2nd__controls-2nd i {
+  margin: 0 25px;
+}
+
+.control-box-2nd__controls-2nd div:nth-child(1) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* .control-box-2nd__controls-2nd div:nth-child(2) i {
+} */
+
+.control-box-2nd__controls-2nd div:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 25px 50px -12px;
+}
+
+.control-box-2nd__controls-2nd div:nth-child(3) i {
+  font-size: 40px;
+  color: white;
+}
+/* .control-box-2nd__controls-2nd div:nth-child(4) i {
+} */
+.control-box-2nd__controls-2nd div:nth-child(5) i {
+  color: rgba(0, 0, 0, 0.5);
+}
